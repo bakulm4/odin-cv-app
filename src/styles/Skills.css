@@ -1,0 +1,31 @@
+.skills-details{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-left:20px;
+}
+
+.editor-content.skills-editor-content{
+    flex-direction: column;
+}
+
+.editor-content .skills{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+}
+
+.editor-content .skill{
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.25rem;
+    color: #2d2d2d;
+    display: inline-flex;
+    margin: 0.75rem 0.75rem 0 0;
+    max-width: calc(100% - 0.75rem);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.skills-editor-content>div{
+    width:100%;
+}

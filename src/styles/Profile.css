@@ -1,0 +1,145 @@
+.section-container{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+.section-title{
+    font-weight: bold;
+    border-bottom: 2px solid rgb(159, 159, 159);
+}
+
+.profile-name{
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 6px
+}
+
+.section-text{
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.icon{
+    height:20px;
+    width:20px;
+    cursor:pointer;
+}
+
+.section-top-icon{
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+
+.section-container:hover .section-top-icon{
+    display:inline-block;
+}
+
+.editor-header{
+    border-bottom: 0.0625rem solid #e5e5e5;
+    height: 3.75rem;
+    padding:0 1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.editor-header-title{
+    color: #2d2d2d;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .0094rem;
+    line-height: 1.75rem;
+    flex:1
+}
+
+.editor-content{
+    display: flex;
+    gap:1rem;
+    padding:2rem;
+}
+
+.editor-content.profile-editor-content{
+    flex-wrap:wrap;
+}
+
+.editor-content>div{
+    width:calc(50% - 0.5rem)
+}
+
+.profile-editor-content>div.email{
+    width:100%;
+}
+
+.editor-content>div.city,.editor-content>div.state,.editor-content>div.zip{
+    width:calc(33.33% - 0.67rem);
+}
+
+label{
+    color: #2d2d2d;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .0187rem;
+    line-height: 150%;
+    white-space: nowrap
+}
+
+input{
+    background-color: #f8f7fa;
+    border: unset;
+    border-radius: 0.25rem;
+    caret-color: #440ccc;
+    color: #2d2d2d;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 3.375rem;
+    letter-spacing: .0187rem;
+    line-height: 150%;
+    padding: 0.9375rem 1.25rem;
+    width: 100%;
+    outline:none
+}
+
+input:hover{
+    background-color: #eeedf0;
+    cursor: pointer;
+}
+input:focus{
+    background-color: #eeedf0;
+    border-bottom: 2px solid #440ccc;
+}
+
+.editor-footer{
+    align-items: center;
+    border-top: 0.0625rem solid #e5e5e5;
+    display: flex;
+    height: 4.5rem;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    gap:0.5rem;
+}
+
+.btn{
+    background-color: transparent;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.125rem;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    color: #2d2d2d;
+    font-size: .875rem;
+    height: 2.5rem;
+    letter-spacing: .0187rem;
+    line-height: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    cursor:pointer;
+}
+
+.btn.save{
+    background-color: #440ccc;
+    color: #fff
+}

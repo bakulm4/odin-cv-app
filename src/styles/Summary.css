@@ -1,0 +1,33 @@
+.section-heading{
+    font-size: 16px;
+    line-height: 18px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.summary-content{
+    flex-direction:column;
+    padding:1rem;
+}
+
+textarea{
+    background-color: #f8f7fa;
+    color:#2d2d2d;
+    border-radius: 0.25rem;
+    padding: 1rem 1.25rem;
+    border: none;
+    font-family: inherit;
+    font-size: 100%;
+    caret-color: #440ccc;
+    height: 17.875rem;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    outline:none;
+    resize:none;
+}
+
+textarea:focus {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
