@@ -62,6 +62,28 @@ export class ExperienceEditor extends Component {
             }}
     }
 
+    static getDerivedStateFromProps(props,state){
+        if(!props.experienceData)
+            return {
+                experience_data: {
+                    company:null,
+                    title:null,
+                    date:{start:null,end:null},
+                    location:{
+                        city:null,
+                        state:null
+                    },
+                    responsibilities:[]
+                }
+            }
+        if(props.experienceData && (props.experienceData.company !== state.experience_data.company ||props.experienceData.title !== state.experience_data.title ||
+            props.experienceData.date.start !== state.experience_data.date.start || props.experienceData.date.end !== state.experience_data.date.end ||
+            props.experienceData.location.city !== state.experience_data.location.city || props.experienceData.location.city !== state.experience_data.location.city ||
+            props.experienceData.responsibilities.some((responsibility,i)=> responsibility !== state.experience_data.responsibilities[i] )))
+        
+                return {experience_data:props.experienceData}
+        return null;
+    }
     render(){
         return  (
         <div className='editor-container'>

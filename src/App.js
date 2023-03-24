@@ -15,23 +15,10 @@ export default class App extends Component {
     }
      
     toggleEdit = (componentName,index=null)=>{
-        // if the same component was being edited but a different subsection then set editing to false to force React to remove the component 
-        // and its current state from the dom and create a new component with updated state. Otherwise React doesn't re-render the component becuase the dom 
-        // position of the component remains the same.
-        if(this.state.component.name===componentName && this.state.editing && this.state.component.index!==index){
-            this.setState({editing:false});
-            setTimeout(()=>{
-                this.setState({
-                    editing:true,
-                    component:{...this.state.component,index:index}
-                }) 
-            },0)
-        }
-        else {this.setState({
+            this.setState({
             editing:true,
             component:{name:componentName,index:index}
             });
-         }
     }
 
     render(){

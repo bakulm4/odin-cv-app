@@ -61,6 +61,29 @@ export class EducationEditor extends Component {
             }}
     }
 
+    static getDerivedStateFromProps(props,state){
+        if(!props.educationData)
+            return {
+                education_data: {
+                    school:null,
+                degree:null,
+                graduationDate:null,
+                location:{
+                    city:null,
+                    state:null
+                },
+                achievements:[]
+                }
+            }
+        if(props.educationData && (props.educationData.school !== state.education_data.school ||props.educationData.degree !== state.education_data.degree ||
+            props.educationData.graduationDate !== state.education_data.graduationDate || 
+            props.educationData.location.city !== state.education_data.location.city || props.educationData.location.city !== state.education_data.location.city ||
+            props.educationData.achievements.some((achievement,i)=> achievement !== state.education_data.achievements[i] )))
+        
+                return {education_data:props.educationData}
+        return null;
+    }
+
     render(){
         return  (
         <div className='editor-container'>
