@@ -54,3 +54,8 @@
 .add{
     margin-top:0.5rem
 }
+
+.btn.save[disabled]{
+    opacity:0.5;
+    cursor: not-allowed;
+}
